@@ -115,7 +115,7 @@ ul {
   color: var(--white-color);
   font-size: 20px;
   font-size: 18px;
-  padding: 0 30px;
+  padding: 0 20px;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -123,7 +123,8 @@ ul {
   position: relative;
   overflow: hidden;
 }
-.header ul a:hover {
+.header ul a:hover,
+.header ul a.active {
   color: var(--blue-color-alt);
   transition: var(--main-transition);
 }
@@ -209,6 +210,37 @@ ul {
   border-color: var(--orange-color);
 }
 /* End Landing */
+/* Start About */
+.about {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.about .main-head {
+  color: var(--blue-color);
+  width: fit-content;
+  margin: auto;
+  padding: 10px 15px; 
+  position: relative;
+}
+.about .main-head::before,
+.about .main-head::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 50%;
+  background: var(--blue-color);
+  transform: translateY(-50%);
+}
+.about .main-head::before {
+  left: -40px;
+}
+.about .main-head::after {
+  right: -40px;
+}
+
+/* End About */
 
 @keyframes move-up-down {
   from {
