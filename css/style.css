@@ -85,7 +85,7 @@ ul {
   transition: var(--main-transition);
   cursor: pointer;
 }
-.header .menu:hover, .header .menu.active {
+.header .menu.active {
   color: var(--blue-color);
 }
 @media(max-width: 767px) {
@@ -180,7 +180,7 @@ ul {
     text-align: center;
   }
   .landing .text h1 {
-    font-size: 25px;
+    font-size: 27px;
   }
   .landing .text p {
     font-size: 16px;

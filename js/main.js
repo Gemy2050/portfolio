@@ -19,7 +19,7 @@ bars.onclick = function() {
 
 // Typed Library
 let word = new Typed(".intro", {
-  strings: ["Mohamed Gamal", "Front-End Dev", "20 Years"],
+  strings: ["Mohamed Gamal", "Front-End Developer", "20 Years"],
   typeSpeed: 100,
   backSpeed: 100,
   loop: true,
