@@ -1,0 +1,220 @@
+/* Variables */
+:root {
+  --blue-color: #0075ff;
+  --blue-color-alt: #1787e0;
+  --green-color: #009688;
+  --orange-color: #FF9800;
+  --white-color: #FFF;
+  --main-transition: .3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #1b1f24;
+}
+/* Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--section-background);
+  color: var(--white-color);
+  font-family: system-ui;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Start Header */
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: relative;
+}
+.header .logo {
+  color: var(--blue-color);
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+.header .logo span {
+  margin-left: 10px;
+  color: white;
+}
+.header ul {
+  display: flex;
+}
+.header .menu {
+  display: none;
+  font-size: 22px;
+  transition: var(--main-transition);
+  cursor: pointer;
+}
+.header .menu:hover, .header .menu.active {
+  color: var(--blue-color);
+}
+@media(max-width: 767px) {
+  .header .logo {
+    font-size: 22px;
+  }
+  .header ul {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    right: 4%;
+    top: 60px;
+    width: 92%;
+    z-index: 10;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+  }
+  .header ul.active {
+    height: 350px;
+  }
+  .header .menu {
+    display: block;
+  }
+}
+.header ul li a {
+  color: var(--white-color);
+  font-size: 20px;
+  font-size: 18px;
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.header ul a:hover {
+  color: var(--blue-color-alt);
+  transition: var(--main-transition);
+}
+.header ul li a:hover::before {
+  left: 0;
+  transition: .5s;
+}
+.header ul a::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color-alt);
+}
+@media(max-width: 767px) {
+  .header ul a::before {
+    top: 94%;
+  }
+}
+/* End Header */
+/* Start Landing */
+.landing {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.landing .container .text {
+  max-width: 400px;
+}
+.landing .text .intro {
+  color: var(--blue-color);
+}
+.landing .text p {
+  line-height: 1.8;
+  font-size: 17px;
+  color: #999;
+}
+@media(max-width: 767px) {
+  .landing .container {
+    flex-direction: column;
+  }
+  .landing .container .text {
+    margin-top: 30%;
+    margin-bottom: 30%;
+    text-align: center;
+  }
+  .landing .text h1 {
+    font-size: 25px;
+  }
+  .landing .text p {
+    font-size: 16px;
+  }
+}
+.landing .image {
+  text-align: center;
+  position: relative;
+}
+.landing .image img {
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  border: 5px solid transparent;
+  outline: 4px solid var(--orange-color);
+  filter: grayscale(1);
+  transition: var(--main-transition);
+  box-shadow: 0 0 25px var(--orange-color);
+  animation: move-up-down 1s ease-in-out infinite alternate;
+}
+.landing .image img:hover {
+  box-shadow: 0 0 40px var(--orange-color);
+  transform: scale(1.2);
+  filter: grayscale(0);
+  outline-color: transparent;
+  border-color: var(--orange-color);
+}
+/* End Landing */
+
+@keyframes move-up-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
