@@ -105,11 +105,45 @@ ul {
 .header ul {
   display: flex;
 }
-.header .menu {
-  display: none;
-  font-size: 22px;
-  transition: var(--main-transition);
+.menu-icon {
+  width: 20px;
+  height: 14px;
   cursor: pointer;
+  position: relative;
+  display: none;
+}
+.menu-icon span {
+  background-color: white;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all .3s ease;
+}
+.menu-icon span:first-child {
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 6px;
+}
+.menu-icon span:last-child {
+  top: 12px;
+}
+.menu-icon span:nth-child(2).active {
+  opacity: 0;
+  left: 10px;
+  transition: .3s;
+}
+.menu-icon span:first-child.active,
+.menu-icon span:last-child.active {
+  top: 6px;
+  background-color: red;
+}
+.menu-icon span:first-child.active {
+  transform: rotate(45deg);
+}
+.menu-icon span:last-child.active {
+  transform: rotate(-45deg);
 }
 .header .menu.active {
   color: var(--blue-color);
@@ -133,13 +167,12 @@ ul {
   .header ul.active {
     height: 350px;
   }
-  .header .menu {
+  .header .menu-icon {
     display: block;
   }
 }
 .header ul li a {
   color: var(--white-color);
-  font-size: 20px;
   font-size: 18px;
   padding: 0 20px;
   height: 70px;
