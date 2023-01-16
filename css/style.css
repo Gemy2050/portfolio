@@ -318,7 +318,7 @@ ul {
   height: 100%;
   background-color: var(--green-color);
   width: 0;
-  transition: width .5s ease-in-out;
+  transition: width .5s linear;
 }
 @media(max-width: 767px) {
   .about .container {
