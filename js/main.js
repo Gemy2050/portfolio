@@ -1,3 +1,4 @@
+// Handle Header Icon 
 let icon = document.querySelector(".header .menu-icon");
 let bars = document.querySelectorAll(".header .menu-icon span");
 let menu = document.querySelector(".header ul");
@@ -13,7 +14,25 @@ icon.onclick = function() {
 
 
 
+// Increase Width of Skills
+function increaseWidth() {
 
+  let widthSpans = document.querySelectorAll(".about .progress span");
+  let skillsSection= document.querySelector(".about");
+
+  if (window.scrollY >= skillsSection.offsetTop) {
+    widthSpans.forEach((el) => (el.style.width = el.dataset.width));
+  }
+}
+
+
+
+// Handle Window Scrolling Event
+window.onscroll = function() {
+
+  increaseWidth();
+
+}
 
 
 
