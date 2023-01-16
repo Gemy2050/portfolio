@@ -12,8 +12,6 @@ icon.onclick = function() {
 }
 
 
-
-
 // Increase Width of Skills
 function increaseWidth() {
 
