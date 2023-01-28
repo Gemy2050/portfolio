@@ -15,8 +15,8 @@ icon.onclick = function() {
 // Increase Width of Skills
 function increaseWidth() {
 
-  let widthSpans = document.querySelectorAll(".about .progress span");
-  let skillsSection= document.querySelector(".about");
+  let widthSpans = document.querySelectorAll(".our-skills .progress span");
+  let skillsSection= document.querySelector(".our-skills");
 
   if (window.scrollY >= skillsSection.offsetTop) {
     widthSpans.forEach((el) => (el.style.width = el.dataset.width));

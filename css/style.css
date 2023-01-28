@@ -256,13 +256,14 @@ ul {
   border-radius: 20px;
   border: 4px solid var(--orange-color);
   transition: var(--main-transition);
-  box-shadow: 0 0 25px var(--orange-color);
+  box-shadow: 0 0 20px var(--orange-color);
+  filter: grayscale(1);
   animation: move-up-down 1s ease-in-out infinite alternate;
 }
 .landing .image img:hover {
   box-shadow: 0 0 40px var(--orange-color);
   transform: scale(1.2);
-  filter: grayscale(1);
+  filter: grayscale(0);
 }
 /* End Landing */
 /* Start About */
@@ -272,42 +273,85 @@ ul {
 }
 .about .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+.about .text {
+  flex: 1;
+  padding: 20px;
+}
+.about .text h1 {
+  color: var(--blue-color);
+  margin: 0 0 20px;
+}
+.about .text p {
+  line-height: 1.8;
+  color: #999;
+}
 .about .image {
+  flex: 1;
+  text-align: center;
+}
+.about .image img {
+  border-radius: 6px;
+  transition: .3s;
+  border: 5px solid black;
+}
+.about .image img:hover {
+  box-shadow: 0 0 25px #eee;
+  transform: rotate(-3deg);
+}
+@media (max-width: 767px) {
+  .about .container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+/* End About */
+/* Start our-skills */
+.our-skills {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.our-skills .content {
+  display: flex;
+  align-items: center;
+}
+.our-skills .image {
   text-align: center;
   margin-right: 100px;
 }
-.about .image .name {
+.our-skills .image .name {
   font-size: 20px;
   color: var(--green-color);
   margin-top: 10px;
 }
-.about img {
-  width: 280px;
-  height: 280px;
+.our-skills img {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
-.about .skills {
+.our-skills .skills {
   width: 100%;
 }
-.about .skills .box {
+.our-skills .skills .box {
   margin: 40px 0;
 }
-.about .skills h4 {
+.our-skills .skills h4 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.about .skills .progress {
+.our-skills .skills .progress {
   position: relative;
   width: 100%;
-  height: 30px;
+  height: 20px;
   background-color: #EEE;
   border-radius: 6px;
   overflow: hidden;
 }
-.about .skills .progress span {
+.our-skills .skills .progress span {
   position: absolute;
   left: 0;
   top: 0;
@@ -316,20 +360,54 @@ ul {
   width: 0;
   transition: width .5s linear;
 }
+.our-skills .skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 20px;
+}
+.our-skills .skills-icons .icon {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0,0%,100%,.2);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+  transition: .3s;
+}
+.our-skills .skills-icons .icon:hover {
+  transition: .3s;
+  border-radius: 50%;
+  border-color: var(--blue-color);
+}
+.our-skills .skills-icons .icon img {
+  transition: .3s;
+  width: 70px;
+  height: 70px;
+}
+.our-skills .skills-icons .icon:hover img {
+  transition: .3s;
+  transform: scale(.8);
+}
 @media(max-width: 767px) {
-  .about .container {
+  .our-skills .content {
     flex-direction: column;
   }
-  .about .image {
+  .our-skills .image {
     margin: 30px 0;
   }
-  .about img {
+  .our-skills img {
     width: 200px;
     height: 200px;
   }
 }
 
-/* End About */
+/* End our-skills */
 
 @keyframes move-up-down {
   from {
