@@ -36,6 +36,7 @@ window.onscroll = function() {
 // Increase Projects
 let showButton = document.querySelector(".projects .show-more");
 let projectsContainer = document.querySelector(".projects .container");
+let projectsImages = [...document.querySelectorAll(".projects .project > img")];
 
 showButton.onclick = function(e) {
   if(this.textContent == "Show More") {
@@ -46,6 +47,36 @@ showButton.onclick = function(e) {
     this.textContent = "Show More";
   }
 }
+
+// Create Popup
+projectsImages.forEach((img) => {
+  img.addEventListener("click", (e)=> {
+    let overlay = document.createElement("div")
+    overlay.className = 'popup-overlay';
+
+    let popup = document.createElement("div");
+    popup.className="popup";
+    let img = document.createElement("img");
+    let closeButton = document.createElement("span");
+    img.src = e.target.src;
+    closeButton.append(document.createTextNode("X"));
+    closeButton.className = 'close-button';
+    popup.append(img);
+    popup.append(closeButton);
+    document.body.append(overlay);
+    document.body.append(popup);
+    
+  })
+});
+
+document.addEventListener("click", function(e) {
+  if(e.target.className == "close-button") {
+    e.target.parentNode.remove();
+    document.querySelector(".popup-overlay").remove();
+  }
+});
+
+
 
 
 
