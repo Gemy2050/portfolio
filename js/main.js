@@ -78,7 +78,8 @@ document.addEventListener("click", function(e) {
 
 
 
-
+// Get Current Year For CopyRight
+document.querySelector(".footer .copyright .year").innerHTML = new Date().getFullYear();
 
 
 // Typed Library
