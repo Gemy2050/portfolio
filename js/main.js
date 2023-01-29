@@ -33,7 +33,19 @@ window.onscroll = function() {
 }
 
 
+// Increase Projects
+let showButton = document.querySelector(".projects .show-more");
+let projectsContainer = document.querySelector(".projects .container");
 
+showButton.onclick = function(e) {
+  if(this.textContent == "Show More") {
+    projectsContainer.style.height = "100%";
+    this.textContent = "Show Less";
+  } else {
+    projectsContainer.style.height = "780px";
+    this.textContent = "Show More";
+  }
+}
 
 
 
