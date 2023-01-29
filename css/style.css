@@ -59,6 +59,18 @@ ul {
   }
 }
 /* Start Components */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #111;
+  box-shadow: 0 0 10px var(--blue-color) inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+  border-radius: 30px;
+  box-shadow: 0 0 30px 30px var(--blue-color);
+}
 .main-head {
   color: var(--blue-color);
   width: fit-content;
@@ -556,6 +568,8 @@ ul {
   align-items: center;
   gap: 50px;
   margin-top: 100px;
+  margin-bottom: 100px;
+  min-height: 600px;
 }
 .contact .container .links {
   flex-direction: column;
