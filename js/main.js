@@ -81,6 +81,38 @@ document.addEventListener("click", function(e) {
 // Get Current Year For CopyRight
 document.querySelector(".footer .copyright .year").innerHTML = new Date().getFullYear();
 
+// Handle Contact Form
+let from_name = document.querySelector(".contact form .from_name")
+let message = document.querySelector(".contact form .message")
+let email = document.querySelector(".contact form .email")
+
+function send() {
+  if(from_name.value == '' || message.value == '' || email.value == '') {
+    return false;
+  }
+  emailjs.send("service_gemy","template_7igv6hf",{
+    to_name: "Mohamed",
+    from_name: from_name.value,
+    message: message.value,
+    email_from: email.value,
+    email_to: "gemy46349@gmail.com",
+    }).then((res) => {
+      document.querySelector(".contact .email-popup").style.display="block";
+      document.querySelector(".contact form .reset").click();
+      
+      document.querySelector(".contact .email-popup span").onclick = ()=> {
+        document.querySelector(".contact .email-popup").style.display="none";
+      }
+    },(error) => {
+      console.log(error);
+    });
+}
+
+document.querySelector(".submit").addEventListener("click", send)
+
+
+
+
 
 // Typed Library
 let word = new Typed(".intro", {
