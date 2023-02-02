@@ -375,7 +375,7 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
   margin: 30px 20px 0;
 }
 .our-skills .skills-icons .icon {
@@ -440,6 +440,7 @@ ul {
   background-color: #382954;
   padding: 10px;
   position: relative;
+  transition: .3s;
 }
 .projects .container .project:hover::before {
   width: 100%;
@@ -462,10 +463,10 @@ ul {
   border-radius: 6px;
   cursor: pointer;
   transition: .3s;
+  box-shadow: 0 0 5px #DDD;
 }
 .projects .container .project > img:hover {
-  transform: scale(.9);
-  transform: .3s;
+  box-shadow: 0 0 10px #DDD;
 }
 .projects .project h3 {
   color: var(--blue-color);

@@ -78,8 +78,6 @@ document.addEventListener("click", function(e) {
 
 
 
-// Get Current Year For CopyRight
-document.querySelector(".footer .copyright .year").innerHTML = new Date().getFullYear();
 
 // Handle Contact Form
 let from_name = document.querySelector(".contact form .from_name")
@@ -111,6 +109,8 @@ function send() {
 document.querySelector(".submit").addEventListener("click", send)
 
 
+// Get Current Year For CopyRight
+document.querySelector(".footer .copyright .year").innerHTML = new Date().getFullYear();
 
 
 
