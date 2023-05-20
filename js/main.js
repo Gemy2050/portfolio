@@ -1,52 +1,50 @@
-// Handle Header Icon 
-let icon = document.querySelector(".header .menu-icon");
-let bars = document.querySelectorAll(".header .menu-icon span");
-let menu = document.querySelector(".header ul");
-
-icon.onclick = function() {
-  menu.classList.toggle('active');
-  // bars.classList.toggle('active');
-  bars.forEach((el) => {
-    el.classList.toggle("active");
-  })
+window.onscroll = ()=> {
+  increaseWidth();
+  scrollTop();
 }
+
+
+// Typed Library
+let word = new Typed(".intro", {
+  strings: ["Mohamed Gamal",  "20 Years"],
+  startDelay: 300,
+  typeSpeed: 100,
+  backDelay: 2000,
+  backSpeed: 100,
+  loop: true,
+  cursorChar: "|",  // Default
+});
 
 
 // Increase Width of Skills
 function increaseWidth() {
 
-  let widthSpans = document.querySelectorAll(".our-skills .progress span");
-  let skillsSection= document.querySelector(".our-skills");
+  let widthSpans = document.querySelectorAll(".skills .progress span");
+  let skillsSection= document.querySelector(".skills");
 
-  if (window.scrollY >= skillsSection.offsetTop) {
+  if (window.scrollY >= skillsSection.offsetTop - 100) {
     widthSpans.forEach((el) => (el.style.width = el.dataset.width));
   }
 }
 
+// Scroll To Top Button
+function scrollTop() {
 
-
-// Handle Window Scrolling Event
-window.onscroll = function() {
-
-  increaseWidth();
+  if(window.scrollY >= 3000)
+    document.querySelector(".scroll-btn").style.right = "20px";
+  else 
+  document.querySelector(".scroll-btn").style.right = "-50px";
 
 }
 
-
-// Increase Projects
-let showButton = document.querySelector(".projects .show-more");
-let projectsContainer = document.querySelector(".projects .container");
-let projectsImages = [...document.querySelectorAll(".projects .project > img")];
-
-showButton.onclick = function(e) {
-  if(this.textContent == "Show More") {
-    projectsContainer.style.height = "100%";
-    this.textContent = "Show Less";
-  } else {
-    projectsContainer.style.height = "780px";
-    this.textContent = "Show More";
-  }
+document.querySelector(".scroll-btn").onclick = ()=> {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
 }
+
+
 
 // Create Popup
 projectsImages.forEach((img) => {
@@ -75,7 +73,6 @@ document.addEventListener("click", function(e) {
     document.querySelector(".popup-overlay").remove();
   }
 });
-
 
 
 
@@ -111,16 +108,3 @@ document.querySelector(".submit").addEventListener("click", send)
 
 // Get Current Year For CopyRight
 document.querySelector(".footer .copyright .year").innerHTML = new Date().getFullYear();
-
-
-
-// Typed Library
-let word = new Typed(".intro", {
-  strings: ["Mohamed Gamal", "Front-End Developer", "20 Years"],
-  startDelay: 300,
-  typeSpeed: 100,
-  backDelay: 2000,
-  backSpeed: 100,
-  loop: true,
-  cursorChar: "|",  // Default
-});
