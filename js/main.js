@@ -1,3 +1,4 @@
+// On Window Scroll
 window.onscroll = ()=> {
   increaseWidth();
   scrollTop();
@@ -45,8 +46,9 @@ document.querySelector(".scroll-btn").onclick = ()=> {
 }
 
 
-
 // Create Popup
+let projectsImages = document.querySelectorAll(".project > img");
+
 projectsImages.forEach((img) => {
   img.addEventListener("click", (e)=> {
     let overlay = document.createElement("div")
@@ -76,7 +78,7 @@ document.addEventListener("click", function(e) {
 
 
 
-// Handle Contact Form
+// Handle Contact Form With Email JS
 let from_name = document.querySelector(".contact form .from_name")
 let message = document.querySelector(".contact form .message")
 let email = document.querySelector(".contact form .email")
@@ -108,3 +110,31 @@ document.querySelector(".submit").addEventListener("click", send)
 
 // Get Current Year For CopyRight
 document.querySelector(".footer .copyright .year").innerHTML = new Date().getFullYear();
+
+
+
+// Initial limit of projects to display
+let limit = 3;
+displayProjects(limit);
+
+// "Show More" button
+const showMoreButton = document.querySelector(".show-more");
+showMoreButton.addEventListener("click", () => {
+    limit += 3;
+    displayProjects(limit);
+  });
+  
+  function displayProjects(num) {
+  
+  let projects = document.querySelectorAll(".projects .project");
+  
+  for(let i=0; i<num; i++) {
+    if(i > projects.length-1) {
+      showMoreButton.style.display="none";
+      break;
+    } 
+    else
+      projects[i].parentElement.style.display="block";
+  }
+
+}

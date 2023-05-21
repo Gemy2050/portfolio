@@ -41,7 +41,7 @@ body {
 .main-title {
   position: relative;
   width: fit-content;
-  margin: 40px auto;
+  margin: 80px auto;
 }
 .main-title::before,
 .main-title::after {
@@ -67,6 +67,9 @@ body {
 }
 
 /* Navbar */
+.navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 2px var(--red-color);
+}
 .nav-item {
   position: relative;
   color: white;
@@ -92,7 +95,7 @@ body {
 
 /* Landing */
 .landing {
-  height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
 }
 .landing .text h1 p {
   letter-spacing: 2px;
@@ -122,7 +125,11 @@ body {
 .landing .image:hover img {
   translate: 0 -20px;
 }
-
+@media (max-width: 575px) {
+  .landing .image {
+    overflow: hidden;
+  }
+}
 /* About */
 .about {
   background-color: #1b1f24;
@@ -197,6 +204,9 @@ body {
   border-color: transparent white transparent transparent;
   left: -20px;
 }
+.timeline-content .content p {
+  margin: 0;
+}
 .clear-float {
   clear: both;
 }
@@ -252,8 +262,10 @@ body {
 
 /* Projects */
 .projects .container .row{
-  /* height: 950px; */
   overflow: hidden;
+}
+.projects .row > div {
+  display: none;
 }
 .projects .project {
   background-color: var(--dark-color);
