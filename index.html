@@ -25,7 +25,32 @@
 </head>
 
 <body>
-
+  <div class="scroller"></div>
+<!-- Start Setting box -->
+<div class="setting-box">
+  <div class="toggle-setting d-flex"><i class="fa fa-gear"></i></div>
+  <div class="setting-container">
+      <div class="option-box">
+          <h4 class="fs-6 mb-2">Colors</h4>
+          <ul class="colors-list d-flex justify-content-between align-items-center list-unstyled">
+              <li class="active" data-color="#ff3150"></li>
+              <li data-color="#2196f3"></li>
+              <li data-color="#ff9800"></li>
+              <li data-color="green"></li>
+              <li data-color="#e91e63"></li>
+          </ul>
+      </div>
+      <div class="option-box">
+          <h4 class="fs-6">Show Scrollbar</h4>
+          <div class="scroll-bar">
+              <span class="yes selected btn py-1 px-2 me-1 red-bg">Yes</span>
+              <span class="no  btn py-1 px-2 red-bg">No</span>
+          </div>
+      </div>
+      <button class="reset btn red-bg w-100">Reset</button>
+  </div>
+</div>
+<!-- End Setting box -->
   <!-- Start Header  -->
   <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
@@ -656,7 +681,7 @@
   </div>
   <!-- End Footer -->
 
-  <div class="scroll-btn btn btn-danger rounded-circle position-fixed"><i class="fas fa-angle-up text-white"></i></div>
+  <div class="scroll-btn btn red-bg rounded-circle position-fixed"><i class="fas fa-angle-up text-white"></i></div>
 
 
   <!-- Scripts -->

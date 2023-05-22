@@ -138,3 +138,85 @@ showMoreButton.addEventListener("click", () => {
   }
 
 }
+
+
+// Open and Close Setting Box
+let icon = document.querySelector(".toggle-setting");
+let settingBox = document.querySelector(".setting-box");
+
+
+icon.onclick = function() {
+  this.querySelector("svg").classList.toggle("fa-spin");
+  settingBox.classList.toggle("open");
+} 
+
+
+// Handle Colors option
+let colors = document.querySelectorAll(".colors-list li");
+
+colors.forEach((color) => {
+  color.addEventListener("click", (e) => {
+    document.querySelector("li.active").classList.remove("active");
+    e.target.classList.add("active");
+    document.documentElement.style.setProperty("--red-color", e.target.dataset.color)
+    localStorage.setItem("color", e.target.dataset.color);
+  })
+});
+
+if(localStorage.getItem("color")) {
+  document.documentElement.style.setProperty("--red-color", localStorage.getItem("color"))
+  colors.forEach((color) => {
+    color.classList.remove("active");
+    if(color.dataset.color == localStorage.getItem("color")) {
+      color.classList.add("active");
+    }
+  })
+}
+
+
+// Handle ScrollBar
+let enableScroll = document.querySelector(".scroll-bar .yes");
+let disableScroll = document.querySelector(".scroll-bar .no");
+
+document.querySelectorAll(".scroll-bar span").forEach((el) => {
+  el.addEventListener("click", (e)=>{
+    document.querySelector(".scroll-bar .selected").classList.remove("selected");
+    e.target.classList.add("selected");
+    if(enableScroll.classList.contains("selected")) {
+      window.localStorage.setItem("scroll", true);
+    } else {
+      window.localStorage.setItem("scroll", false);
+    }
+    scrollBar();
+  });
+});
+
+function scrollBar() {
+
+  let scroller = document.querySelector(".scroller");
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  window.addEventListener("scroll", ()=> {
+    let scrollTop = document.documentElement.scrollTop;
+    scroller.style.width = `${(scrollTop / height) * 100}%`
+  });
+
+  if (window.localStorage.getItem("scroll") == "true") {
+    scroller.style.visibility = "visible";
+    enableScroll.classList.add("selected");
+    disableScroll.classList.remove("selected");
+  } else {
+    scroller.style.visibility = "hidden";
+    enableScroll.classList.remove("selected");
+    disableScroll.classList.add("selected");
+  }
+
+}
+scrollBar();
+
+
+// Reset Options
+document.querySelector(".reset").onclick = ()=> {
+  localStorage.clear();
+  location.reload();
+}
