@@ -150,6 +150,13 @@ icon.onclick = function() {
   settingBox.classList.toggle("open");
 } 
 
+document.querySelectorAll("body > div:not(.setting-box)").forEach(el=> {
+  el.onclick = function() {
+    settingBox.classList.remove("open");
+    document.querySelector(".toggle-setting .fa-gear").classList.remove("fa-spin");
+  }
+});
+
 
 // Handle Colors option
 let colors = document.querySelectorAll(".colors-list li");
