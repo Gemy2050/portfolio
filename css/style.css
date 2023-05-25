@@ -234,6 +234,7 @@ body {
   padding: 10px;
   background-color: var(--red-color);
   margin: 30px auto;
+  font-weight: bold;
 }
 .timeline-content .left,
 .timeline-content .right {
@@ -355,6 +356,9 @@ body {
   border-radius: 6px;
   cursor: pointer;
   border-bottom: 1px solid #EEE;
+}
+.projects .project .card-title {
+  color: var(--red-color) !important;
 }
 .projects .links a img {
   width: 40px;
