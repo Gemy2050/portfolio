@@ -124,7 +124,6 @@ const showMoreButton = document.querySelector(".show-more");
 showMoreButton.addEventListener("click", () => {
     limit += 3;
     displayProjects(limit);
-    scrollBar()
   });
   
   function displayProjects(num) {
@@ -204,9 +203,9 @@ document.querySelectorAll(".scroll-bar span").forEach((el) => {
 function scrollBar() {
 
   let scroller = document.querySelector(".scroller");
-  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
+  
   window.addEventListener("scroll", ()=> {
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrollTop = document.documentElement.scrollTop;
     scroller.style.width = `${(scrollTop / height) * 100}%`
   });
