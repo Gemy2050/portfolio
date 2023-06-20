@@ -100,12 +100,14 @@ function send() {
       document.querySelector(".contact .email-popup span").onclick = ()=> {
         document.querySelector(".contact .email-popup").style.display="none";
       }
-    },(error) => {
+    } ,(error) => {
+      document.querySelector(".contact .email-popup").innerHTML = "Something Went Wrong"
+      document.querySelector(".contact .email-popup").style.display="block";
       console.log(error);
     });
 }
 
-document.querySelector(".submit").addEventListener("click", send)
+// document.querySelector(".submit").addEventListener("click", send);
 
 
 // Get Current Year For CopyRight
@@ -227,3 +229,25 @@ document.querySelector(".reset").onclick = ()=> {
   localStorage.clear();
   location.reload();
 }
+
+
+
+
+// document.querySelector("form").onsubmit = function() {
+//   console.log("Done");
+//   let formData = new FormData(this);
+//   formData.append('service_id', 'service_gemy');
+//   formData.append('template_id', 'template_7igv6hf');
+//   formData.append('user_id', 'GJuZ94gbyIJNNDHG_');
+
+//   fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
+//       method: 'POST',
+//       data: formData,
+//       contentType: false, // auto-detection
+//       processData: false // no need to parse formData to string
+//   }).then(function() {
+//       alert('Your mail is sent!');
+//   }).catch(function(error) {
+//       alert('Oops... ' + JSON.stringify(error));
+//   });
+// }
