@@ -124,6 +124,7 @@ const showMoreButton = document.querySelector(".show-more");
 showMoreButton.addEventListener("click", () => {
     limit += 3;
     displayProjects(limit);
+    scrollBar()
   });
   
   function displayProjects(num) {
