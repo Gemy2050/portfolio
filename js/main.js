@@ -109,11 +109,7 @@ let email = document.querySelector(".contact form .email")
 
 // document.querySelector(".submit").addEventListener("click", send);
 document.querySelector(".submit").addEventListener("click", ()=> {
-  document.querySelector(".contact .email-popup .msg").innerHTML = "Something Went Wrong";
-  document.querySelector(".contact .email-popup").style.display="block";
-  document.querySelector(".contact .email-popup span").onclick = ()=> {
-    document.querySelector(".contact .email-popup").style.display="none";
-  }
+  swal("Something went wrong", 'This service is not available now', 'error')
 });
 
 
