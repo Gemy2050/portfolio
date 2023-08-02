@@ -1,9 +1,3 @@
-window.onload = ()=> {
-  document.body.classList.remove("loading");
-  document.querySelector(".load").style.display = "none";
-}
-
-
 // On Window Scroll
 window.onscroll = ()=> {
   increaseWidth();
@@ -85,9 +79,9 @@ document.addEventListener("click", function(e) {
 
 
 // Handle Contact Form With Email JS
-let from_name = document.querySelector(".contact form .from_name")
-let message = document.querySelector(".contact form .message")
-let email = document.querySelector(".contact form .email")
+// let from_name = document.querySelector(".contact form .from_name")
+// let message = document.querySelector(".contact form .message")
+// let email = document.querySelector(".contact form .email")
 
 // function send() {
 //   if(from_name.value == '' || message.value == '' || email.value == '') {
