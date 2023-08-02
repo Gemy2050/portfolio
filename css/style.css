@@ -25,6 +25,9 @@ body {
   color: white;
   overflow-x: hidden;
 }
+body.loading > *:not(.load){
+  display: none !important;
+}
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -597,3 +600,38 @@ body {
   }
 }
 /* End footer */
+
+/* Loading */
+.load {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  /* margin: 50px auto; */
+}
+.load div {
+  background-color: orchid;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation-name: up-down;
+  animation-duration: .9s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.load .two {
+  animation-delay: .3s;
+}
+.load .three {
+  animation-delay: .6s;
+}
+
+@keyframes up-down{
+  to {
+      opacity: 0.2;
+      transform: translateY(-20px);
+  }
+}

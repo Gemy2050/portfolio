@@ -1,3 +1,9 @@
+window.onload = ()=> {
+  document.body.classList.remove("loading");
+  document.querySelector(".load").style.display = "none";
+}
+
+
 // On Window Scroll
 window.onscroll = ()=> {
   increaseWidth();
@@ -121,11 +127,18 @@ document.querySelector(".footer .copyright .year").innerHTML = new Date().getFul
 
 // Initial limit of projects to display
 let limit = 3;
+if(screen.width > 767) {
+  limit = 6;
+}
 displayProjects(limit);
 
 // "Show More" button
 const showMoreButton = document.querySelector(".show-more");
 showMoreButton.addEventListener("click", () => {
+  if(showMoreButton.innerHTML != "Show More") {
+    displayProjects(6);
+    return false;
+  }
     limit += 3;
     displayProjects(limit);
   });
@@ -133,10 +146,13 @@ showMoreButton.addEventListener("click", () => {
   function displayProjects(num) {
   
   let projects = document.querySelectorAll(".projects .project");
+
+  projects.forEach((project) => project.parentElement.style.display = "none")
   
   for(let i=0; i<num; i++) {
     if(i > projects.length-1) {
-      showMoreButton.style.display="none";
+      // showMoreButton.style.display="none";
+      showMoreButton.innerHTML = "Show Less";
       break;
     } 
     else
