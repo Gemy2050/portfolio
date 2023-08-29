@@ -301,6 +301,9 @@ body {
   }
 }
 /* Skills */
+.skills {
+  background-color: var(--dark-color);
+}
 .skills img {
   width: 350px;
 }
@@ -319,15 +322,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: hsla(0,0%,100%,.2); */
   background-color: var(--dark-color);
+  background-color: hsla(0,0%,100%,.2);
   border: 2px solid transparent;
   border-radius: 10px;
   padding: 5px;
-  transition: .3s;
+  transition: .3s !important;
 }
 .skills .techs .icon:hover {
   border-radius: 50%;
+  transition: .3s;
 }
 .skills .techs .icon:hover img {
   scale: .8;
@@ -359,6 +363,7 @@ body {
 }
 .projects .project .card-title {
   color: var(--red-color) !important;
+  min-height: 50px;
 }
 .projects .links a img {
   width: 40px;
