@@ -430,6 +430,9 @@ body {
 }
 /* End Popup Style */
 /* Start Contact */
+.contact {
+  background-color: #1b1f24;
+}
 .contact .container .links,
 .contact .links .icon {
   display: flex;
@@ -567,7 +570,10 @@ body {
   margin-top: 70px;
 }
 /* End Contact */
-/* Start footer */
+body > svg {
+  background-color: #1b1f24;
+}
+/* Start footer */ 
 .footer .container .box {
   flex: 1;
 }
