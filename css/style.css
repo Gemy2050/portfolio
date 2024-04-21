@@ -31,7 +31,6 @@ body {
 }
 
 .app.hide {
-  overflow-x: hidden;
   display: none;
 }
 
