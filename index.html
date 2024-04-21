@@ -12,6 +12,7 @@
   <meta property="og:url" content="https://gemy2050.github.io/portfolio">
   <meta name="description" content="This is a Portfolio">
   <title>Portfolio</title>
+  <link rel="shortcut icon" href="imgs/icon.jpg" type="image/x-icon">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -21,10 +22,9 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <link rel="shortcut icon" href="imgs/icon.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
     integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 </head>
 
@@ -65,7 +65,7 @@
     <div class="container">
       <a class="navbar-brand fs-4 d-flex align-items-center gap-2" href="">
         <i class="fas fa-code fa-fw red-color"></i>
-        <span class="">Developer</span>
+        <span class="">Dev <span class="">X</span></span>
       </a>
       <button aria-label=" Label For Button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,12 +97,13 @@
       <div class="row g-3 d-flex align-items-center">
         <div class="col-md-6">
           <div class="text text-md-start text-center" data-aos="fade-right">
-            <h1>
+            <h1 class="mb-3">
               <p class="fs-5">Hello There I am</p>
               <span class="intro fs-1 red-color my-2"></span>
             </h1>
-            <p class="fs-4">I'm a <span class="red-color fw-bold">Front-End</span> Developer.</p>
-            <!-- <button aria-label=" Label For Button" class="btn red-bg rounded-pill">Download CV</button> -->
+            <!-- <p class="fs-4">I'm a <span class="red-color fw-bold">Front-End</span> Developer.</p> -->
+            <a href="./Resume_New.pdf" aria-label=" Label For Button" class="btn red-bg rounded-2"
+              download="Resume">Download CV</a>
           </div>
           <div class="social"></div>
         </div>
@@ -283,7 +284,7 @@
           </div>
         </div>
       </div>
-      <div class="techs mt-5 p-4 d-flex flex-wrap justify-content-center gap-4">
+      <div class="techs mt-5 p-1 p-md-4 d-flex flex-wrap justify-content-center gap-3 gap-md-4">
         <div class="icon d-flex align-items-center justify-content-center" data-aos="fade-up">
           <img loading="lazy" src="imgs/html.png" class="img-fluid" alt="icon">
         </div>
@@ -294,7 +295,16 @@
           <img loading="lazy" src="imgs/js.png" class="img-fluid" alt="icon">
         </div>
         <div class="icon d-flex align-items-center justify-content-center" data-aos="fade-up">
+          <img loading="lazy" src="./imgs/typescript.png" class="img-fluid" alt="icon">
+        </div>
+        <div class="icon d-flex align-items-center justify-content-center" data-aos="fade-up">
           <img loading="lazy" src="imgs/react.png" class="img-fluid" alt="icon">
+        </div>
+        <div class="icon d-flex align-items-center justify-content-center" data-aos="fade-up">
+          <img loading="lazy" src="imgs/redux.png" class="img-fluid" alt="icon">
+        </div>
+        <div class="icon d-flex align-items-center justify-content-center" data-aos="fade-up">
+          <img loading="lazy" src="imgs/firebase.png" class="img-fluid" alt="icon">
         </div>
         <div class="icon d-flex align-items-center justify-content-center" data-aos="fade-up">
           <img loading="lazy" src="imgs/Bootstrap.png" class="img-fluid" alt="icon">
@@ -329,400 +339,9 @@
     <h1 class="main-title">My <span class="red-color"> Projects </span></h1>
     <div class="container">
       <div class="row g-4 g-md-5">
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/e-store.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">E-Commerce Store</h5>
-              <p class="card-text">App Created With: React, Redux Toolkit</p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="" target="_blank" title="View Code"></a>
-                <a href="https://brand-store.surge.sh/" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/conference.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Science Conference Template</h5>
-              <p class="card-text">Awesome Template Design</p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/gemy2050/Bs_Template2" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Bs_Template2" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/youtube.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Youtube Clone (Installable)</h5>
-              <p class="card-text">You Can Browse videos, search, subscriptions etc...</p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/gemy2050/my_tube" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/my_tube" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/ecommerce.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">eCommerce App</h5>
-              <p class="card-text">You Can Browse The Products and Add Them To Card</p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="#" target="_blank" title="View Code"></a>
-                <a href="https://advanced-ecommerce.surge.sh" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/prog-quiz-app.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Programming Quiz App</h5>
-              <p class="card-text">This App Show Some Questions And You Must Select Answer Before Time out</p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Prog_Quiz_App" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Prog_Quiz_App" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/prays-time.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Prays Time</h5>
-              <p class="card-text">
-                This App Get Prays Time And The Remaining Time For Each Pray Depend on Your Location
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Prays_Time" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Prays_Time" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/doctor-clinic.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Hospital App</h5>
-              <p class="card-text">A Hospital App That Have Its Details</p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="" target="_blank" title="View Code"></a>
-                <a href="https://doctor-clinic.surge.sh" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/dorsin.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Dorsin Template</h5>
-              <p class="card-text">
-                Awesome Template Design
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Bs_Template" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Bs_Template" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/bondi.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Bondin Template</h5>
-              <p class="card-text">
-                Awesome Template Design
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Bondi" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Bondi" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/dashboard.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Dashboard</h5>
-              <p class="card-text">
-                Awesome Admin Dashboard
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Dashboard" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Dashboard" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/creative_studio.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Creative Studio Template</h5>
-              <p class="card-text">
-                Awesome Template
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Creative_Studio" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Creative_Studio" target="_blank" title="Live Demo"><img
-                    loading="lazy" src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/special.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Special Design</h5>
-              <p class="card-text">
-                Aewsome Website With Many Nice Options Such as Color, Background, and Dark Mode
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Special_Design" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Special_Design" target="_blank" title="Live Demo"><img
-                    loading="lazy" src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/remove-bg.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Background Remover</h5>
-              <p class="card-text">
-                This App Remove an Image Background To Become Transparent
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Background_Removal" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Background_Removal" target="_blank" title="Live Demo"><img
-                    loading="lazy" src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/yt-downloader.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Youtube Video Downloader</h5>
-              <p class="card-text">
-                You Can Download or Watch a Youtube Video
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Video_Downloader" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Video_Downloader" target="_blank" title="Live Demo"><img
-                    loading="lazy" src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/islamic.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Islamic Website</h5>
-              <p class="card-text">
-                Have Quran Surahs, Ahadith, Religin Lesson And Pray Time
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Islamic_Website" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="" title="Live Demo"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/quran.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Quran Player</h5>
-              <p class="card-text">
-                You Can Listen To All Quran Surahs
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Quran_Player" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Quran_Player" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/audio_player.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Audio Player</h5>
-              <p class="card-text">
-                Sound Player With Move Options
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Audio_Player" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Audio_Player" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/cruds.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">CRUDS System</h5>
-              <p class="card-text">
-                Product Management System Enable You To Add, Update, Delete And Search about Products
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/cruds" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/cruds" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/img-editor.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Image Editor</h5>
-              <p class="card-text">
-                Website That Edit Images With Many Filters
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Image_Editor" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Image_Editor" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/template.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Template</h5>
-              <p class="card-text">
-                A Nice Template
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Template3" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Template3" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/xo-game.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">XO Game</h5>
-              <p class="card-text">
-                Awesome XO Game
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/XO_Game" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/XO_Game" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/qr-code.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">QR Code Generator</h5>
-              <p class="card-text">
-                You Can Write a Text or Link And Get its QR Code
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/QR_Code_Generator" target="_blank" title="View Code"><img
-                    loading="lazy" src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/QR_Code_Generator" target="_blank" title="Live Demo"><img
-                    loading="lazy" src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/repos.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">Github Repos</h5>
-              <p class="card-text">
-                You Can Get a Repositories Of Specific User, Just Write Username
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/Fetch_Repos" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/Fetch_Repos" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="project card" data-aos="flip-left">
-            <img loading="lazy" src="imgs/todo.png" class="card-img-top" alt="image">
-            <div class="card-body">
-              <h5 class="card-title text-primary">ToDo App</h5>
-              <p class="card-text">
-                You Can Write Tasks or Notes And It Will be Save In Local Storage
-              </p>
-              <div class="links d-flex justify-content-between align-items-center">
-                <a href="https://github.com/Gemy2050/To_Do_App" target="_blank" title="View Code"><img loading="lazy"
-                    src="imgs/github.png" class="img-fluid" alt="image"></a>
-                <a href="https://gemy2050.github.io/To_Do_App" target="_blank" title="Live Demo"><img loading="lazy"
-                    src="imgs/eye.png" class="img-fluid" alt="image"></a>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
-      <div class="show-more btn red-bg">Show More</div>
+      <div class="show-more d-none btn red-bg">Show More</div>
     </div>
   </div>
   <!-- Start Projects -->
@@ -758,7 +377,7 @@
         <div class="input-box">
           <textarea type="text" class="message" placeholder="Message" spellcheck="false" required></textarea>
         </div>
-        <div type="text" class="submit">Submit</div>
+        <div type="text" class="submit" disabled>Submit</div>
         <button aria-label=" Label For Button" style="display: none;" type="reset" class="reset">Reset</button>
       </form>
     </div>
@@ -813,7 +432,6 @@
 
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -826,9 +444,9 @@
     })();
   </script> -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
     integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/all.min.js"></script>
   <script src="js/main.js"></script>

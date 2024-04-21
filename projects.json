@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Linkedin Clone",
+    "description": "Created With: React, Redux, Bootstrap, and Firebase",
+    "demo": "https://linkedin-gemy.firebaseapp.com",
+    "code": "https://github.com/Gemy2050/Linkedin-Clone",
+    "image": "./imgs/linkedin-clone.png"
+  },
+  {
+    "title": "E-Commerce Store",
+    "description": "App Created With: React, Redux Toolkit",
+    "demo": "https://brand-store.surge.sh",
+    "code": "https://github.com/Gemy2050/ecommerce-redux",
+    "image": "./imgs/e-store.png"
+  },
+  {
+    "title": "Programming Quiz App",
+    "description": "This App Show Some Questions And You Must Select Answer Before Time out",
+    "demo": "https://gemy2050.github.io/Prog_Quiz_App",
+    "code": "https://github.com/Gemy2050/Prog_Quiz_App",
+    "image": "./imgs/prog-quiz-app.png"
+  },
+  {
+    "title": "Quran Player and Prays Time",
+    "description": "Quran Player, Prays Time And The Remaining Time For Prays Depend on Your Location",
+    "demo": "https://gemy2050.github.io/Quran_MP3/",
+    "code": "https://github.com/Gemy2050/Quran_MP3",
+    "image": "./imgs/quran_mp3.png"
+  },
+  {
+    "title": "CRUDS System",
+    "description": "Product Management System Enable You To Add, Update, Delete And Search about Products",
+    "demo": "https://gemy2050.github.io/cruds",
+    "code": "https://github.com/Gemy2050/cruds",
+    "image": "./imgs/cruds.png"
+  },
+  {
+    "title": "Health Care Template",
+    "description": "Awesome Template Design",
+    "demo": "https://doctor-clinic.surge.sh/",
+    "code": null,
+    "image": "./imgs/doctor-clinic.png"
+  },
+  {
+    "title": "Science Conference Template",
+    "description": "Awesome Template Design",
+    "demo": "https://gemy2050.github.io/Bs_Template2",
+    "code": "https://github.com/gemy2050/Bs_Template2",
+    "image": "./imgs/conference.png"
+  },
+  {
+    "title": "Creative Studio Template",
+    "description": "Awesome Template Design",
+    "demo": "https://gemy2050.github.io/Creative_Studio",
+    "code": "https://github.com/Gemy2050/Creative_Studio",
+    "image": "./imgs/creative_studio.png"
+  },
+  {
+    "title": "Dashboard",
+    "description": "Awesome Admin Dashboard Design",
+    "demo": "https://github.com/Gemy2050/Dashboard",
+    "code": "https://gemy2050.github.io/Dashboard",
+    "image": "./imgs/dashboard.png"
+  }
+]
