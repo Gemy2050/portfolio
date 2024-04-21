@@ -1,3 +1,9 @@
+window.onload = () => {
+  document.body.style.overflow = "auto";
+  document.querySelector(".load").style.cssText = "display: none;";
+  document.querySelector(".app").classList.remove("hide");
+};
+
 //* On Window Scroll
 window.onscroll = () => {
   increaseWidth();
@@ -5,7 +11,6 @@ window.onscroll = () => {
 };
 
 // * Make Typing Effect
-
 let typingElement = document.querySelector(".intro");
 let words = ["FrontEnd Developer", "Mohamed Gamal", "21 Years Old"];
 let index = 0;
@@ -82,28 +87,6 @@ document.querySelector(".scroll-btn").onclick = () => {
   });
 };
 
-//* Create Popup
-let projectsImages = document.querySelectorAll(".project > img");
-
-projectsImages.forEach((img) => {
-  img.addEventListener("click", (e) => {
-    let overlay = document.createElement("div");
-    overlay.className = "popup-overlay";
-
-    let popup = document.createElement("div");
-    popup.className = "popup";
-    let img = document.createElement("img");
-    let closeButton = document.createElement("span");
-    img.src = e.target.src;
-    closeButton.append(document.createTextNode("X"));
-    closeButton.className = "close-button";
-    popup.append(img);
-    popup.append(closeButton);
-    document.body.append(overlay);
-    document.body.append(popup);
-  });
-});
-
 document.addEventListener("click", function (e) {
   if (e.target.className == "close-button") {
     e.target.parentNode.remove();
@@ -153,7 +136,7 @@ document.querySelector(".footer .copyright .year").innerHTML =
 
 async function addProjects() {
   let projects = document.querySelector(".projects .container .row");
-  let res = await fetch("../projects.json");
+  let res = await fetch("https://gemy2050.github.io/portfolio/projects.json");
   let data = await res.json();
 
   console.log(data);
@@ -166,7 +149,7 @@ async function addProjects() {
           <div class="project card" data-aos="flip-left">
             <img loading="lazy" src="${
               el.image
-            }" class="card-img-top" alt="image">
+            }" class="card-img-top" alt="image" onclick="openPopup(event)">
             <div class="card-body">
               <h5 class="card-title text-primary">${el.title}</h5>
               <p class="card-text">${el.description}</p>
@@ -191,6 +174,24 @@ async function addProjects() {
 }
 
 addProjects();
+
+//* Create Image Popup
+function openPopup(e) {
+  let overlay = document.createElement("div");
+  overlay.className = "popup-overlay";
+
+  let popup = document.createElement("div");
+  popup.className = "popup";
+  let img = document.createElement("img");
+  let closeButton = document.createElement("span");
+  img.src = e.target.src;
+  closeButton.append(document.createTextNode("X"));
+  closeButton.className = "close-button";
+  popup.append(img);
+  popup.append(closeButton);
+  document.body.append(overlay);
+  document.body.append(popup);
+}
 
 //* Open and Close Setting Box
 let icon = document.querySelector(".toggle-setting");

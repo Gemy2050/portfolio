@@ -28,7 +28,11 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #191919;
   color: white;
+}
+
+.app.hide {
   overflow-x: hidden;
+  display: none;
 }
 
 ::-webkit-scrollbar {
