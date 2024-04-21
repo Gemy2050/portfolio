@@ -1,9 +1,3 @@
-window.onload = () => {
-  document.body.style.overflow = "auto";
-  document.querySelector(".load").style.cssText = "display: none;";
-  document.querySelector(".app").classList.remove("hide");
-};
-
 //* On Window Scroll
 window.onscroll = () => {
   increaseWidth();
