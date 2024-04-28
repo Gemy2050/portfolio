@@ -58,7 +58,7 @@ body {
 
 .scroll-btn svg:hover {
   transition: .3s;
-  color: #e91e63;
+  opacity: .9;
 }
 
 .main-title {
