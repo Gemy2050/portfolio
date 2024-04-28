@@ -25,7 +25,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Tahoma', sans-serif;
   background-color: #191919;
   color: white;
   overflow-x: hidden;
@@ -47,6 +47,18 @@ body {
   right: -50px;
   bottom: 30px;
   transition: right .3s;
+  background-color: transparent;
+  line-height: 0;
+}
+
+.scroll-btn svg {
+  color: var(--red-color);
+  font-size: 30px;
+}
+
+.scroll-btn svg:hover {
+  transition: .3s;
+  color: #e91e63;
 }
 
 .main-title {
@@ -205,12 +217,16 @@ body {
   min-height: calc(100vh - 60px);
 }
 
+.intro {
+  position: relative;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
+}
+
 .intro::after {
   content: '|';
   color: white;
   animation: change-opacity .3s alternate infinite;
-  font-size: 35px !important;
-  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
+  /* font-size: 35px !important; */
 }
 
 @keyframes change-opacity {

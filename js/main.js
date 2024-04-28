@@ -6,55 +6,39 @@ window.onscroll = () => {
 
 // * Make Typing Effect
 let typingElement = document.querySelector(".intro");
-let words = ["FrontEnd Developer", "Mohamed Gamal", "21 Years Old"];
+let words = ["Mohamed Gamal", "FrontEnd Developer", "21 Years Old"];
 let index = 0;
-let mainIntervalID;
+let charIndex = 0;
 
-let typingDuration = 2000;
-let typingDelay = 2000;
-let removingDuration = 2000;
+let typingDuration = 200;
+let typingDelay = 200;
+let removeDuration = 200;
 let removeDelay = 2000;
-
 typingElement.innerText = "";
 
-function startTyping() {
-  mainIntervalID = setInterval(addWord, typingDelay);
-}
-addWord();
-
 function addWord() {
-  clearInterval(mainIntervalID);
-
-  index++;
-  if (index > words.length - 1) index = 0;
-
-  typingElement.innerText = "";
-  let i = 0;
   let word = words[index];
 
-  let intervalID = setInterval(() => {
-    typingElement.innerHTML += word[i];
-    i++;
-
-    if (i > word.length - 1) {
-      clearInterval(intervalID);
-      setTimeout(removeWord, removeDelay);
-    }
-  }, typingDuration / word.length);
+  if (charIndex < word.length) {
+    typingElement.innerText += word[charIndex];
+    charIndex++;
+    setTimeout(addWord, typingDuration);
+  } else {
+    index++;
+    if (index > words.length - 1) index = 0;
+    setTimeout(removeWord, removeDelay);
+  }
 }
+setTimeout(addWord, 200);
 
 function removeWord() {
-  startTyping();
-
-  let word = words[index];
-  let i = word.length;
-  let intervalID = setInterval(() => {
-    i--;
-    typingElement.innerHTML = word.slice(0, i);
-    if (i == 0) {
-      clearInterval(intervalID);
-    }
-  }, removingDuration / word.length);
+  if (charIndex > 0) {
+    --charIndex;
+    typingElement.innerText = typingElement.innerText.slice(0, charIndex);
+    setTimeout(removeWord, removeDuration);
+  } else {
+    setTimeout(addWord, typingDelay);
+  }
 }
 
 //* Increase Width of Skills
