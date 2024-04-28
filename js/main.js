@@ -117,8 +117,6 @@ async function addProjects() {
   let res = await fetch("https://gemy2050.github.io/portfolio/projects.json");
   let data = await res.json();
 
-  console.log(data);
-
   projects.innerHTML = "";
 
   data.forEach((el) => {
