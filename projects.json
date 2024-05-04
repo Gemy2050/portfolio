@@ -14,13 +14,6 @@
     "image": "./imgs/e-store.png"
   },
   {
-    "title": "Social App",
-    "description": "Social App Created with Restful API",
-    "demo": "https://gemy2050.github.io/social_app",
-    "code": "https://github.com/Gemy2050/social_app",
-    "image": "./imgs/social_app.png"
-  },
-  {
     "title": "Programming Quiz App",
     "description": "This App Show Some Questions And You Must Select Answer Before Time out",
     "demo": "https://gemy2050.github.io/Prog_Quiz_App",
