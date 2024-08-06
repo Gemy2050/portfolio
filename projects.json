@@ -21,6 +21,13 @@
     "image": "./imgs/prog-quiz-app.png"
   },
   {
+    "title": "Social App",
+    "description": "You can browse posts, register to create posts and comment on other posts, and view profiles",
+    "demo": "https://gemy2050.github.io/social_app",
+    "code": "https://github.com/Gemy2050/social_app",
+    "image": "./imgs/social_app.png"
+  },
+  {
     "title": "Quran Player and Prays Time",
     "description": "Quran Player, Prays Time And The Remaining Time For Prays Depend on Your Location",
     "demo": "https://gemy2050.github.io/Quran_MP3/",
