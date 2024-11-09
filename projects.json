@@ -7,6 +7,13 @@
     "image": "./imgs/linkedin-clone.png"
   },
   {
+    "title": "Students Assistant",
+    "description": "Application designed to assist students of Computer Science with programming concepts, study resources, and another activities such as posts, chats ..etc",
+    "demo": "https://chatbot-gemy.firebaseapp.com/",
+    "code": "https://github.com/Gemy2050/Chatbot_Project",
+    "image": "./imgs/student_assistant.png"
+  },
+  {
     "title": "E-Commerce Store",
     "description": "App Created With: React, Redux Toolkit",
     "demo": "https://brand-store.surge.sh",
@@ -61,12 +68,5 @@
     "demo": "https://github.com/Gemy2050/Dashboard",
     "code": "https://gemy2050.github.io/Dashboard",
     "image": "./imgs/dashboard.png"
-  },
-  {
-    "title": "Students Assistant",
-    "description": "Application designed to assist students of Computer Science with programming concepts, study resources, and another activities such as posts, chats ..etc",
-    "demo": "https://chatbot-gemy.firebaseapp.com/",
-    "code": "https://github.com/Gemy2050/Chatbot_Project",
-    "image": "./imgs/student_assistant.png"
   }
 ]

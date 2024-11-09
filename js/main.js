@@ -6,7 +6,7 @@ window.onscroll = () => {
 
 // * Make Typing Effect
 let typingElement = document.querySelector(".intro");
-let words = ["Mohamed Gamal", "FrontEnd Developer", "21 Years Old"];
+let words = ["Mohamed Gamal", "FrontEnd Developer", "22 Years Old"];
 let index = 0;
 let charIndex = 0;
 
