@@ -128,7 +128,9 @@ async function addProjects() {
             }" class="card-img-top" alt="image" onclick="openPopup(event)">
             <div class="card-body">
               <h5 class="card-title text-primary">${el.title}</h5>
-              <p class="card-text">${el.description}</p>
+              <p class="card-text" title="${el.description}">${
+      el.description
+    }</p>
               <div class="links d-flex justify-content-between align-items-center">
                 <a href="${el.code}" target="_blank" title="View Code">
                 ${

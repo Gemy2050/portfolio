@@ -1,7 +1,7 @@
 [
     {
     "title": "KidsKiosk E-Commerce",
-    "description": "a comprehensive e-commerce platform with a robust admin dashboard for real-time analytics, product management, and order tracking. The platform combines powerful administrative controls with an intuitivecustomer shopping experience.",
+    "description": "a comprehensive e-commerce platform with a robust admin dashboard for real-time analytics, product management, and order tracking. The platform combines powerful administrative controls with an intuitive customer shopping experience.",
     "demo": "https://kidskiosk.vercel.app/",
     "code": "https://github.com/Gemy2050/KidsKiosk",
     "image": "./imgs/kidskiosk.png"

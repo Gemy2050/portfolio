@@ -16,16 +16,16 @@
 .red-bg {
   background-color: var(--red-color);
   color: white;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .red-bg:hover {
   background-color: var(--red-color);
-  opacity: .9;
+  opacity: 0.9;
 }
 
 body {
-  font-family: 'Tahoma', sans-serif;
+  font-family: "Tahoma", sans-serif;
   background-color: #191919;
   color: white;
   overflow-x: hidden;
@@ -46,7 +46,7 @@ body {
 .scroll-btn {
   right: -50px;
   bottom: 30px;
-  transition: right .3s;
+  transition: right 0.3s;
   background-color: transparent;
   line-height: 0;
 }
@@ -57,8 +57,8 @@ body {
 }
 
 .scroll-btn svg:hover {
-  transition: .3s;
-  opacity: .9;
+  transition: 0.3s;
+  opacity: 0.9;
 }
 
 .main-title {
@@ -69,12 +69,11 @@ body {
 
 .main-title::before,
 .main-title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--red-color);
-
 }
 
 .main-title::before {
@@ -100,7 +99,7 @@ body {
   background-color: var(--red-color);
   height: 3px;
   z-index: 1000;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 /* Setting box */
@@ -113,7 +112,7 @@ body {
   height: 100vh;
   border-right: 1px solid var(--red-color);
   left: -200px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .setting-box.open {
@@ -174,7 +173,7 @@ body {
 }
 
 .scroll-bar span {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .scroll-bar span.selected {
@@ -197,7 +196,7 @@ body {
 }
 
 .nav-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   translate: -50%;
@@ -205,7 +204,7 @@ body {
   height: 2px;
   width: 0;
   background-color: var(--red-color);
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .nav-item:hover::before {
@@ -219,19 +218,20 @@ body {
 
 .intro {
   position: relative;
-  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3));
+  -webkit-box-reflect: below 10px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 }
 
 .intro::after {
-  content: '|';
+  content: "|";
   color: white;
-  animation: change-opacity .3s alternate infinite;
+  animation: change-opacity 0.3s alternate infinite;
   /* font-size: 35px !important; */
 }
 
 @keyframes change-opacity {
   to {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -257,8 +257,8 @@ body {
 .landing img {
   width: 250px;
   border-radius: 20px;
-  transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
+  transition: 0.3s;
   background-color: var(--red-color);
   border-radius: 50%;
   border: 25px solid white;
@@ -267,7 +267,7 @@ body {
 
 .landing img:hover {
   box-shadow: 0 0 25px 10px var(--red-color);
-  scale: .9;
+  scale: 0.9;
 }
 
 /* .landing .image:hover::before {
@@ -296,7 +296,7 @@ body {
 
 /* Time Line */
 .timeline-content::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 0;
@@ -333,7 +333,7 @@ body {
 
 .timeline-content .left::before,
 .timeline-content .right::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -354,7 +354,7 @@ body {
 
 .timeline-content .left::after,
 .timeline-content .right::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -380,8 +380,7 @@ body {
   clear: both;
 }
 
-@media(max-width: 575px) {
-
+@media (max-width: 575px) {
   .timeline-content .left,
   .timeline-content .right {
     width: 100%;
@@ -408,7 +407,7 @@ body {
   top: 0;
   width: 0;
   height: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
   background-color: var(--red-color);
 }
 
@@ -418,24 +417,24 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--dark-color);
-  background-color: hsla(0, 0%, 100%, .2);
+  background-color: hsla(0, 0%, 100%, 0.2);
   border: 2px solid transparent;
   border-radius: 10px;
   padding: 5px;
-  transition: .3s !important;
+  transition: 0.3s !important;
 }
 
 .skills .techs .icon:hover {
   border-radius: 50%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .skills .techs .icon:hover img {
-  scale: .8;
+  scale: 0.8;
 }
 
 .skills .techs .icon img {
-  transition: .3s;
+  transition: 0.3s;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -455,12 +454,12 @@ body {
   text-align: center;
 }
 
-.projects .project>img {
+.projects .project > img {
   width: 100%;
   height: 200px;
   border-radius: 6px;
   cursor: pointer;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 }
 
 .projects .project .card-title {
@@ -480,7 +479,12 @@ body {
 }
 
 .projects .card-text {
-  min-height: 90px;
+  min-height: 95px;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
 }
 
 .show-more {
@@ -531,7 +535,7 @@ body {
 
 .popup-overlay {
   position: fixed;
-  background-color: rgb(0, 0, 0, .7);
+  background-color: rgb(0, 0, 0, 0.7);
   left: 0;
   top: 0;
   width: 100%;
@@ -557,7 +561,7 @@ body {
   height: 60px;
   width: 60px;
   border-radius: 8px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .contact .links .icon:hover {
@@ -575,7 +579,7 @@ body {
   position: relative;
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .contact form {
     margin: auto;
     max-width: 100%;
@@ -621,7 +625,7 @@ body {
   font-weight: bold;
   border: 1px solid var(--red-color);
   background-color: transparent;
-  transition: .3s;
+  transition: 0.3s;
   line-height: 30px;
 }
 
@@ -646,7 +650,7 @@ body {
   padding: 20px;
   color: white;
   border: 1px solid transparent;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .contact .input-box input:focus,
@@ -664,12 +668,12 @@ body {
   cursor: pointer;
   padding: 10px;
   font-weight: bold;
-  transition: .3s;
+  transition: 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -707,7 +711,7 @@ body {
 }
 
 /* End Contact */
-body>svg {
+body > svg {
   background-color: #1b1f24;
 }
 
@@ -773,17 +777,17 @@ body>svg {
   border-radius: 50%;
   margin: 0 5px;
   animation-name: up-down;
-  animation-duration: .9s;
+  animation-duration: 0.9s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
 .load .two {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 
 .load .three {
-  animation-delay: .6s;
+  animation-delay: 0.6s;
 }
 
 @keyframes up-down {
